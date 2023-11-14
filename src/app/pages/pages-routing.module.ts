@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {DashComponent} from './dash/dash.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { RealTimeComponent } from './real-time/real-time.component';
 
 const routes: Routes = [{
   path: '',
@@ -18,6 +20,15 @@ const routes: Routes = [{
       path: 'iot-dashboard',
       component: DashboardComponent,
     },
+    {
+      path: 'dash',
+      component: DashComponent,
+    },
+    {
+      path: 'real-time',
+      component: RealTimeComponent,
+    },
+    
     {
       path: 'layout',
       loadChildren: () => import('./layout/layout.module')
